@@ -1,0 +1,7 @@
+.container {
+  height: 80vh;
+  width: 120vh;
+  display: grid;
+  background-color: blue;
+  grid-template: repeat(6, 1fr) / repeat(7, 1fr);
+}

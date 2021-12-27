@@ -1,9 +1,11 @@
-import './App.css';
-import React from 'react';
+import React from "react";
+import GameTable from "./components/GameTable";
 
 function App() {
   return (
-    <div>App</div>
+    <>
+      <GameTable />
+    </>
   );
 }
 
