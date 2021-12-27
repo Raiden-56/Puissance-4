@@ -1,3 +1,9 @@
+:root {
+  --color-blue: #0173d2;
+  --color-red: #fd6967;
+  --color-yellow: #f8fa83;
+}
+
 * {
   margin: 0;
   padding: 0;

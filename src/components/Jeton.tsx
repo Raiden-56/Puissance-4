@@ -1,30 +1,11 @@
-import React, { useRef } from "react";
+import React from "react";
 import styles from "./Jeton.module.css";
 
-function Jeton({
-  state,
-  play,
-  player,
-}: {
-  state: number;
-  play: () => any;
-  player: 0 | 1;
-}) {
-  const AlreadyPlayed = useRef<boolean>(false);
-
+function Jeton({ state, play }: { state: number; play: () => any }) {
   function handleClick() {
-    // if (AlreadyPlayed.current)
-    // return console.log("Already Played here connard");
-    play();
-    AlreadyPlayed.current = true;
-    /*
-      Play function should return a response with true / false
-      True if everything is ok and the player can play
-      False if he can't play in this place (Already Played)
-      */
+    const response = play();
+    if (!response) return alert("It seems that you can't play here !");
   }
-
-  const playersColrs = ["#ff0000", "#ffff00"];
 
   return (
     <div
@@ -32,14 +13,12 @@ function Jeton({
       style={{
         background: [0, 1].includes(state)
           ? state === 1
-            ? "#ff0000"
-            : "#ffff00"
+            ? "var(--color-red)"
+            : "var(--color-yellow)"
           : "grey",
       }}
       onClick={handleClick}
-    >
-      <div>{state}</div>
-    </div>
+    />
   );
 }
 

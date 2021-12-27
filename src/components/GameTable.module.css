@@ -1,7 +1,29 @@
 .container {
-  height: 80vh;
-  width: 120vh;
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.player {
+  color: white;
+  background-color: var(--color-red);
+  padding: 0.5em 1.25em;
+  border-radius: 0.5rem;
+  border-radius: solid 1px;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.table {
+  gap: 1rem;
+  width: 700px;
+  height: 600px;
+  padding: 1rem;
   display: grid;
-  background-color: blue;
+  border-radius: 0.5rem;
+  background-color: var(--color-blue);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   grid-template: repeat(6, 1fr) / repeat(7, 1fr);
 }
